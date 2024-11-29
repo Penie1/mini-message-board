@@ -5,5 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>mini-message-board</title>
   </head>
-  <body></body>
+  <body>
+    <% if(messages.length === 0) {%>
+    <h1>No message yet</h1>
+    <% }else{ %>
+    <ul>
+      <% messages.forEach(({text,user,added})=>{ %>
+      <li>
+        <span><%=user%> </span>
+        <p><%= text %></p>
+        <div><%=added%></div>
+      </li>
+      <% }) %>
+    </ul>
+    <% } %>
+    <a href="/new">Add new message</a>
+  </body>
 </html>
