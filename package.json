@@ -2,6 +2,7 @@
   "name": "mini-message-board",
   "version": "1.0.0",
   "main": "main.js",
+  "type": "module",
   "scripts": {
     "start": "node --watch main.js"
   },
