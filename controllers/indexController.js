@@ -6,7 +6,7 @@ const getMessages = (req, res) => {
 
 const postMessage = (req, res) => {
   const { text: messageText, user: messageUser } = req.body;
-  messages.push({ text: messageText, user: messageText, added: new Date() });
+  messages.push({ text: messageText, user: messageUser, added: new Date() });
   res.redirect("/");
 };
 export { getMessages, postMessage };
